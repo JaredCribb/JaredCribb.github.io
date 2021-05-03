@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>TA Applications</title>
+    <link rel="shortcut icon" href="images/AUM_schoolname_Black02.png">
+    <link rel="stylesheet" href="styles/product.css">
+    <link rel= "stylesheet" href="styles/normalize.css">
+    <link rel="icon" href="images/AUM%20Logo(1).jpg">
+    
+    <style>
+    	
+		h1 {
+			color: orange; 
+			font-size: 140%;
+		}
+		h2 {
+			font-size: 115%;
+			padding: .5em 0;
+		}
+		label {
+			color: orange;
+			float: left;
+			width: 8em;
+			font-weight: bold;
+			text-align: left;
+            padding-left: 200px;
+		}
+		input {
+			width: 15em;
+			margin: 0 0 .5em 1em;
+            
+            
+		}
+		#button, #reset {
+			width: 7em;
+			background-color: silver;
+			box-shadow: 2px 2px 0 black; }
+		#button {
+			
+		}
+        input[type="checkbox"] {
+            width: 13px;
+        }
+	</style>
+   
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <img src="images/AUM_schoolname_Black02.png" class="image1"></a>
+        <h2 class="head">TA Applications</h2>
+         
+         <nav id="nav_menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="productlist.html">CS Description</a></li>
+                <li><a class="current" href="cat.html">TA Application</a></li>
+                <li><a href="cat%20-%20Copy.html">GPA Calculator</a>
+                    
+                </li>
+                    
+                
+                
+            </ul>
+        </nav>
+    </header>
+    <main>
+    <aside>
+        <h3>Teaching Assistant Application</h3>
+        <p>Thank you for your interest in becoming a Teaching Assistant for a Professor! Note: None of your information is used publicly or for any other reason than this application.</p>
+        <h1>Please enter the necessary information</h1>
+<form name="myform" action="survey_data.html" method="get">
+	
+	<h2>Contact Information</h2>
+	<label for="fname">First Name:</label>
+    <input type="text" name="fname" id="fname" autofocus required>
+    <br>
+    <label for="lname">Last Name:</label>
+    <input type="text" name="lname" id="lname" required><br>
+    <label for="initials">Initials:</label>
+    <input type="text" name="initials" id="initials" required><br>
+    <label for="gender">Gender:</label>
+    <input type="text" name="gender" id="gender"><br>
+    <h2>School Information</h2>
+    <label for="id">ID:</label>
+    <input type="text" name="id" id="id" required><br>
+    <label for="gpa">GPA:</label>
+    <input type="text" name="gpa" id="gpa" required><br>
+    <label for="subdate">Submission Date:</label>
+    <input type="text" name="subdate" id="subdate" required><br>
+    <h2>How did you hear about us?</h2>
+    <label for="web">Web Search:</label>
+    <input type="checkbox" class="abc" name="web" id="web" value="websearch"><br>
+    <label for="students">Students:</label>
+    <input type="checkbox" name="students" id="students" value="students"><br>
+    <label for="faculty">Faculty:</label>
+    <input type="checkbox" name="faculty" id="faculty" value="faculty"><br>
+    <label for="emailmsg">Email Message:</label>
+    <input type="checkbox" name="emailmsg" id="emailmsg" value="emailmsg"><br>
+    <h2>Comments</h2>
+    <textarea rows="5" cols="60" name="comments"></textarea><br>
+    <h2>Thank you for your interest in a TA position!</h2>
+    <input type="submit" name="button" id="button" value="Submit">
+    <input type="reset" name="reset" id="reset"> 
+</form>
+        
+       
+                
+            
+        
+    
+   </aside>
+            
+        
+    </main>
+        <footer>
+        <p class="footer">Jared Cribb</p>
+        <p class="footer">Contact Lei (Lee) Wu.</p>
+        <p class="footer">Department of Computer Science & Computer Information Systems (CSCI)</p>
+        <p class="footer">College of Science (CoS), Auburn University at Montgomery (AUM)</p>
+    <p class="footer">Office: Goodwyn Hall 310-Q</p>
+<p class="footer">E-Mail: lwu@aum.edu</p>
+        <p class="footer">&#169 Auburn University at Montgomery</p>
+    
+    </footer>
+   
+	
+</body>
+    
+</html>

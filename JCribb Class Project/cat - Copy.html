@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>GPA Calculator</title>
+    <link rel="shortcut icon" href="images/AUM_schoolname_Black02.png">
+    <link rel="stylesheet" href="styles/product%20-%20Copy.css">
+    <link rel= "stylesheet" href="styles/normalize.css">
+    <link rel="icon" href="images/AUM%20Logo(1).jpg">
+   
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <img src="images/AUM_schoolname_Black02.png" class="image1"></a>
+        <h2>GPA Calculator</h2>
+          <nav id="nav_menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="productlist.html">CS Description</a></li>
+                <li><a href="cat.html">TA Application</a></li>
+                <li><a class="current" href="cat%20-%20Copy.html">GPA Calculator</a>
+                    
+                </li>
+                    
+                
+                
+            </ul>
+        </nav>
+             
+    </header>
+    <main>
+    <aside>
+        <h3>GPA Calculator</h3>
+        <p>Enter your letter grade below for the courses and your gpa will be calculated</p>
+          <script>
+      
+      var scores = {
+        Distinction: 0,
+        A: 4, B: 3, C: 2, D: 1, F: 0
+      };
+      var subjects = [
+        "Subject A", "Subject B", "Subject C", "Subject D"
+      ];
+
+     
+      window.addEventListener("load", function(){
+        let wrapper = document.getElementById("gpa-wrap"),
+            table = document.createElement("table"),
+            row = table.insertRow(),
+            cell = null, selector = null, option = null;
+
+        for (let s of subjects) {
+          cell = row.insertCell();
+          cell.innerHTML = s;
+          cell = row.insertCell();
+          selector = document.createElement("select");
+          cell.appendChild(selector);
+          for (let grade in scores) {
+            option = document.createElement("option");
+            option.innerHTML = grade;
+            option.value = scores[grade];
+            selector.appendChild(option);
+            selector.onchange = gpacalc;
+          }
+          row = table.insertRow();
+        }
+        wrapper.appendChild(table);
+        gpacalc();
+      });
+      
+     
+      var gpacalc = function(){
+        let all = document.querySelectorAll("#gpa-wrap select"),
+            score = 0;
+        for (let i of all) {
+          
+          score += parseInt(i.value);
+        }
+        document.getElementById("gpa-total").innerHTML = score;
+        document.getElementById("gpa-average").innerHTML = score / all.length;
+      };
+    </script>
+    <style>
+      #gpa-wrap table {
+        border-collapse: collapse;
+        margin: auto;
+        padding-bottom: 10px;
+        
+        
+        
+      }
+      #gpa-wrap table tr:nth-child(odd){
+        background: orange;
+      }
+      #gpa-wrap table tr td {
+        padding: 10px;
+          text-align: center;
+      }
+    </style>
+  
+  
+    <!-- (B) HTML -->
+    <div id="gpa-wrap"></div>
+    <div>
+      Total Points: <span id="gpa-total">0</span>
+    </div>
+    <div>
+      GPA: <span id="gpa-average">0</span>
+    </div>
+    <p>Thank you for using our GPA calculator. Remember that studying hard, using your time wisely, and utilizing campus resources are instrumental in raising your grade.</p>
+      
+                
+            
+        
+    
+   </aside>
+            
+        
+    </main>
+      <footer>
+        <p class="footer">Jared Cribb</p>
+        <p class="footer">Contact Lei (Lee) Wu.</p>
+        <p class="footer">Department of Computer Science & Computer Information Systems (CSCI)</p>
+        <p class="footer">College of Science (CoS), Auburn University at Montgomery (AUM)</p>
+    <p class="footer">Office: Goodwyn Hall 310-Q</p>
+<p class="footer">E-Mail: lwu@aum.edu</p>
+        <p class="footer">&#169 Auburn University at Montgomery</p>
+    
+    </footer>
+   
+	
+</body>
+    
+</html>
